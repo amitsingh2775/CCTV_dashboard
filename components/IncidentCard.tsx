@@ -1,6 +1,7 @@
 // components/IncidentCard.tsx
 import { Camera, Incident } from '../app/generated/prisma'
 import { Clock } from 'lucide-react'
+import { JSX } from 'react'
 
 type Props = {
   incident: Incident & { camera: Camera }
