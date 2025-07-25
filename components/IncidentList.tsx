@@ -22,8 +22,6 @@ export default function IncidentList({ onSelectIncident }: Props) {
 
       if (Array.isArray(data)) {
         setIncidents(data)
-      } else {
-        console.error('Expected array but got:', data)
       }
 
       setLoading(false)

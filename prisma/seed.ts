@@ -3,11 +3,11 @@ import { PrismaClient } from '../app/generated/prisma'
 const prisma = new PrismaClient()
 
 async function main() {
-  // ✅ Delete old data first (order matters due to foreign key constraints)
+  
   await prisma.incident.deleteMany()
   await prisma.camera.deleteMany()
 
-  // 🎥 Create Cameras
+
   const cameraA = await prisma.camera.create({
     data: { name: 'Camera - 01', location: 'Shop Floor A' },
   })
@@ -20,7 +20,7 @@ async function main() {
     data: { name: 'Camera - 03', location: 'Entrance' },
   })
 
-  // 🚨 Create Incidents
+ 
   const baseDate = new Date('2025-07-22T00:00:00Z')
 
   const incidents = [
@@ -126,12 +126,11 @@ async function main() {
     })
   }
 
-  console.log('✅ Seeded successfully')
 }
 
 main()
   .catch((e) => {
-    console.error(e)
+   
     process.exit(1)
   })
   .finally(async () => {
