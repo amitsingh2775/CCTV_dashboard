@@ -4,9 +4,9 @@ import type { NextRequest } from "next/server";
 
 export async function PATCH(
   req: NextRequest,
-  context: { params: { id: string } }
+  { params }: { params: { id: string } }
 ) {
-  const { id } = context.params;
+  const { id } = params;
 
   try {
     const existing = await prisma.incident.findUnique({
