@@ -1,4 +1,4 @@
-// components/IncidentCard.tsx
+
 import { Camera, Incident } from '../app/generated/prisma'
 import { Clock } from 'lucide-react'
 import { JSX } from 'react'
@@ -43,7 +43,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
       />
 
       <div className="flex-1 flex flex-col justify-between h-full">
-        {/* Top: Incident Type with Dynamic Icon */}
+
         <div className="flex items-center gap-1 px-2 py-1 text-white font-bold text-[14px] leading-[100%] tracking-[0] font-inter">
           {iconMap[incident.type] || (
             <img
@@ -55,7 +55,6 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
           {incident.type}
         </div>
 
-        {/* Bottom: Camera Name + Time */}
         <div className="flex flex-col gap- mt-5 ml-3">
           <div className="flex items-center gap-2 text-xs text-white font-bold">
             <img

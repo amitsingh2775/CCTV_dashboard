@@ -9,7 +9,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 z-50 w-full h-[76px] bg-gradient-to-r from-black to-zinc-900 px-6 py-4 flex justify-between items-center shadow-lg border-b border-white/15 text-white">
-      {/* Left: Logo */}
+ 
       <div className="flex items-center gap-2">
         <div className="w-6 h-6">
           <svg
@@ -33,12 +33,12 @@ export default function Navbar() {
         <span className="text-[16px] font-extrabold font-[Plus_Jakarta_Sans]">MANDLACK</span>
       </div>
 
-      {/* Mobile: Hamburger Icon */}
+  
       <div className="md:hidden">
         <Menu className="cursor-pointer" onClick={() => setMenuOpen(!menuOpen)} />
       </div>
 
-      {/* Desktop Tabs */}
+  
       <ul className="hidden md:flex gap-6 text-sm font-medium ml-10">
         <li className="flex items-center gap-1 hover:text-yellow-400 cursor-pointer">
           <Image src="/Dicon.png" alt="Dashboard Icon" width={12} height={12} className="object-contain" />
@@ -50,7 +50,7 @@ export default function Navbar() {
         </li>
         <li className="flex items-center gap-1 hover:text-yellow-400 cursor-pointer">
           <svg width="16" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-4 h-4">
-            {/* path kept same */}
+      
             <path
               d="M7.52816 11.3333H8.86149L9.06149 10.3333..."
               fill="white"
@@ -68,7 +68,6 @@ export default function Navbar() {
         </li>
       </ul>
 
-      {/* Profile Info */}
       <div className="flex items-center gap-2">
         <img
           src="https://i.pravatar.cc/40"
@@ -81,7 +80,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Mobile Menu Drawer */}
       {menuOpen && (
         <div className="absolute top-20 left-0 w-full bg-black border-t border-white/10 md:hidden">
           <ul className="flex flex-col px-6 py-4 gap-3 text-sm font-medium">

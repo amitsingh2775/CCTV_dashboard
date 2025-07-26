@@ -1,4 +1,4 @@
-// components/IncidentPlayer.tsx
+
 import { CalendarDays } from 'lucide-react'
 import CameraStrip from './CameraStrip'
 
@@ -17,7 +17,7 @@ export default function IncidentPlayer({ selectedIncidentThumbnail }: Props) {
         transform: 'rotate(0deg)',
       }}
     >
-      {/* Top-left Timestamp Badge */}
+    
       <div
         className="absolute top-7 left-4 z-10 flex items-center gap-1 text-white text-xs rounded px-[6px] py-[2px]"
         style={{
@@ -31,7 +31,7 @@ export default function IncidentPlayer({ selectedIncidentThumbnail }: Props) {
         <span>11/7/2025 - 03:12:37</span>
       </div>
 
-      {/* Video or Thumbnail */}
+      
       <div className="w-[700px] h-[449px] bg-black flex items-center justify-center text-white text-lg font-semibold overflow-hidden rounded-xl">
         <img
           src={
@@ -42,7 +42,7 @@ export default function IncidentPlayer({ selectedIncidentThumbnail }: Props) {
         />
       </div>
 
-      {/* Bottom-left Camera Badge */}
+     
       <div
         className="absolute bottom-2 left-7 flex items-center gap-1 text-xs text-white px-[10px] py-[2px] rounded border z-20"
         style={{
@@ -53,7 +53,7 @@ export default function IncidentPlayer({ selectedIncidentThumbnail }: Props) {
           opacity: 1,
         }}
       >
-        {/* Red Dot Icon */}
+     
         <svg
           width="12"
           height="12"
@@ -85,7 +85,6 @@ export default function IncidentPlayer({ selectedIncidentThumbnail }: Props) {
         <span>Camera - 01</span>
       </div>
 
-      {/* Bottom-right Camera Strip */}
       <div className="absolute bottom-2 right-28 z-20">
         <CameraStrip />
       </div>
