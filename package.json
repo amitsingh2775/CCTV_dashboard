@@ -1,11 +1,10 @@
-{
+ {
   "name": "secure-sight",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "CI= npm run _build",
-    "_build": "next build",
+    "build": "next build",
     "start": "next start",
     "lint": "next lint"
   },
@@ -28,4 +27,4 @@
     "tailwindcss": "^4",
     "typescript": "^5"
   }
-}
+} 
