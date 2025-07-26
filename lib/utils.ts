@@ -17,5 +17,5 @@ export function formatTimeRange(start: Date, end: Date) {
     year: 'numeric',
   })
 
-  return `${startTime} – ${endTime} on ${date}`
+  return `${startTime} - ${endTime} on ${date}`
 }

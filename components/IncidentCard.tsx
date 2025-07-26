@@ -2,6 +2,7 @@
 import { Camera, Incident } from '../app/generated/prisma'
 import { Clock } from 'lucide-react'
 import { JSX } from 'react'
+import Image from 'next/image'
 
 type Props = {
   incident: Incident & { camera: Camera }
@@ -36,7 +37,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
       className="flex items-center gap-4 p-3 shadow-sm cursor-pointer"
       onClick={onSelect}
     >
-      <img
+      <Image
         src={incident.thumbnailUrl}
         alt="thumb"
         className="w-20 h-14 rounded-md object-cover"
@@ -46,7 +47,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
 
         <div className="flex items-center gap-1 px-2 py-1 text-white font-bold text-[14px] leading-[100%] tracking-[0] font-inter">
           {iconMap[incident.type] || (
-            <img
+            <Image
               src="/default.png"
               alt="Default"
               className="w-4 h-4 object-contain"
@@ -57,7 +58,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
 
         <div className="flex flex-col gap- mt-5 ml-3">
           <div className="flex items-center gap-2 text-xs text-white font-bold">
-            <img
+            <Image
               src="/cam.png"
               alt="Default"
               className="w-4 h-4 object-contain"
@@ -66,7 +67,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
           </div>
           <div className="flex items-center text-sm text-white gap-4 font-bold">
             <Clock size={12}  color={'white'}/>
-            {start} – {end}
+            {start} - {end}
           </div>
         </div>
       </div>
@@ -78,7 +79,7 @@ export default function IncidentCard({ incident, onResolve, onSelect }: Props) {
     onResolve(incident.id)
   }}
 >
-  Resolve <span className='gap-3'>&gt;</span>
+  Resolve <span>&gt;</span>
 </button>
 
     </div>
